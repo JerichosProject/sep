@@ -1,0 +1,79 @@
+:root{
+    --counter-reds:rgb(240, 52, 52);
+    --counter-destroyed-reds:rgb(100, 1, 1);
+    --counter-yellows:rgb(228, 228, 93);
+    --counter-destroyed-yellows:rgb(90, 90, 0);
+    --counter-dev:rgb(50, 15, 206);
+    --cell-size:2em;
+}
+#game table tbody tr td{
+    border:1px solid #000;
+    height:var(--cell-size);
+    min-height:var(--cell-size);
+    max-height:var(--cell-size);
+    min-width:var(--cell-size);
+    max-width:var(--cell-size);
+    width:var(--cell-size);
+    font-size: var(--cell-size);
+    text-align: center;
+    border-radius: 70%;
+}
+#game table tbody tr td.red{
+    background-color: var(--counter-reds);
+}
+#game table tbody tr td.red[cannot_destroy_others="true"]{
+    background-color: var(--counter-destroyed-reds);
+}
+#game table tbody tr td.yellow{
+    background-color: var(--counter-yellows);
+}
+#game table tbody tr td.yellow[cannot_destroy_others="true"]{
+    background-color: var(--counter-destroyed-reds);
+}
+#game table tbody tr td.dev{
+    background-color: var(--counter-dev);
+}
+
+#player{
+    margin-top: 3em;
+}
+button {
+    border:0px;
+    padding:6px;
+    border-radius:6px;
+    margin:2px;
+    cursor: pointer;
+}
+button.counter{
+    background-color: rgb(19, 142, 250);
+    color:#fff;
+}
+button.reset{
+    background-color: rgb(206, 27, 4);
+    color:#fff;
+}
+button.update{
+    background-color: rgb(8, 228, 8);
+    color:#fff;
+    cursor: pointer;
+}
+h1,h2,h3,h4,h5,p{
+    margin:0px;
+}
+
+#player .current_player[player="0"] {
+    background-color: var(--counter-reds);
+}
+#player .current_player[player="1"] {
+    background-color: var(--counter-yellows);
+}
+#player .current_player {
+    font-size: 3.0em;
+    max-width: max-content;
+    border-radius: 6px;
+    padding:6px;
+}
+
+*{
+    font-family: arial;
+}

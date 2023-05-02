@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Connect four rebarded.">
+        <meta name="author" content="Created by Jericho Uzzell">
+
+        <title>Connect 4</title>
+        <link rel="stylesheet" href="style.css"></link>
+    </head>
+    <body>
+        <div id="game">
+            <table>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="player">
+            <h3 class="current_player"></h3>
+            <p class="scores"></p>
+            <p class="buttons"></p>
+            <div class="other_buttons" style="display: none;">
+                <button class="reset">Reset</button>
+                <h4>Counter required to win</h4>
+                <input id="counters_to_win" type="input" />
+                <h4>Counters needed to be trapped then destroyed</h4>
+                <input id="counters_to_destroy" type="input" />
+                <h4>Grid</h4>
+                X <input id="grid_x" type="input" />
+                Y <input id="grid_y" type="input" />
+                <button class="update">Update</button>
+            </div>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="game.js"></script>
+</html>
